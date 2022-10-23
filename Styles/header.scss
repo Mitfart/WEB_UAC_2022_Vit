@@ -1,0 +1,32 @@
+.header {
+  max-width: 100%;
+  height: 70px;
+
+  padding: 10px 100px;
+
+  background-color: var(--c-primal);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__menu{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo-container, &__user, &__notifications {
+    width: 40px;
+    height: 40px;
+    background-color: var(--c-neutral);
+  }
+
+  &__user-container {
+    display: flex;
+    align-items: center;
+    & > * { margin-left: 10px; }
+  }
+}
