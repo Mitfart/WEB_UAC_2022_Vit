@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <title>UAC VIT SITE</title>
 
-    <link rel="stylesheet" href="Styles/root.css">
+    <link rel="stylesheet" href="Styles/normalize.css">
+
     <link rel="stylesheet" href="Styles/main.css">
+    <link rel="stylesheet" href="Styles/icons.css">
+
+    <link rel="stylesheet" href="Styles/search.css">
     <link rel="stylesheet" href="Styles/header.css">
 </head>
 <body>
 
     <header class="header">
         <nav class="header__menu">
-            <div class="header__logo-container logo-container">
-                <div class="logo">
-                    <img src="#" alt="#" class="logo__img">
-                </div>
+            <div class="header__logo-container logo-container square">
+                <i class="icon icon_logo"></i>
             </div>
             <nav class="header__search search">
                 <input type="text" class="search__field">
-                <button class="search__button">
-                    <img src="#" alt="#" class="search__icon">
+                <button class="search__button square">
+                    <i class="icon icon_search"></i>
                 </button>
             </nav>
             <nav class="header__user-container">
-                <div class="header__user user">
-                    <img src="#" alt="#" class="user__icon">
+                <div class="header__user user square">
+                    <i class="icon icon_user"></i>
                 </div>
-                <div class="header__notifications notifications">
-                    <img src="#" alt="#" class="notifications__icon">
+                <div class="header__notifications notifications square">
+                    <i class="icon icon_bell"></i>
                 </div>
             </nav>
         </nav>

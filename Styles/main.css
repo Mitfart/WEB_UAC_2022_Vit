@@ -4,7 +4,14 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  background-color: var(--c-neutral);
+  background-color: #F4F4F4;
+}
+
+.square::before {
+  content: "";
+  display: block;
+  float: left;
+  padding-bottom: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

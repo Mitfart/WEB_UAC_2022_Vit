@@ -1,9 +1,21 @@
+@import 'vars';
+
 body {
   width: 100vw;
   min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
 
-  background-color: var(--c-neutral);
+  background-color: $c-neutral;
+}
+
+.square {
+  &::before {
+    content: '';
+    display: block;
+    float: left;
+    padding-bottom: 100%;
+  }
 }
