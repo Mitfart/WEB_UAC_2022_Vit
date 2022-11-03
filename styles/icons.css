@@ -1,0 +1,11 @@
+.icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.icon_search {
+  background: url("./Icons/search.svg") no-repeat center;
+  background-size: contain;
+}
+
+/*# sourceMappingURL=icons.css.map */
