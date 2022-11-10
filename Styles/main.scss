@@ -1,4 +1,8 @@
-@import 'vars';
+@use 'vars';
+
+* {
+  border: 0;
+}
 
 body {
   width: 100vw;
@@ -8,7 +12,7 @@ body {
   flex-direction: column;
   overflow-x: hidden;
 
-  background-color: $c-neutral;
+  background-color: vars.$c-neutral;
 }
 
 .square {
