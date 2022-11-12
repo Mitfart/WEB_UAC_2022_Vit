@@ -19,6 +19,7 @@
 }
 .header__logo-container, .header__user, .header__notifications, .header__search .search__button {
   width: 40px;
+  flex-shrink: 0;
   background-color: #F4F4F4;
 }
 .header__user-container {

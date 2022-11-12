@@ -2,7 +2,7 @@ body {
   color: #525252;
   font-size: 16px;
   font-family: "Roboto", sans-serif, serif;
-  background-color: #FAFDFE;
+  background-color: #F4F4F4;
 }
 
 .user__avatar {
@@ -108,7 +108,7 @@ body {
   height: 20px;
 }
 .post__user-activity {
-  background-color: #F0F0F0;
+  background-color: #F4F4F4;
 }
 .post__user-activity_active {
   color: #E17493;
@@ -128,7 +128,7 @@ body {
 }
 
 i {
-  background-color: #F0F0F0;
+  background-color: #F4F4F4;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
