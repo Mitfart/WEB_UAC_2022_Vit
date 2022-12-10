@@ -1,0 +1,151 @@
+@use './vars';
+
+
+* {
+  transition: .25s ease;
+}
+html {
+  font-family: vars.$f-family;
+  font-size: vars.$f-size;
+  color: vars.$c-second;
+}
+body {
+  background-color: vars.$c-base;
+}
+
+
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: vars.$c-primal;
+  color: vars.$c-primal-c;
+
+  padding: .75rem 1.5rem;
+  border-radius: 1000rem;
+
+  cursor: pointer;
+  border: .125rem solid transparent;
+  &:hover {
+    border-color: vars.$c-primal-c;
+  }
+
+  &_active {
+    background-color: vars.$c-primal-c;
+    color: vars.$c-primal;
+  }
+}
+
+
+
+.icon {
+  width:  1em;
+  height: 1em;
+}
+
+
+
+.search {
+  background-color: vars.$c-base;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 1000rem;
+  overflow: hidden;
+
+  color: vars.$c-primal-c;
+
+
+  &__field {
+    width: 100%;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__field,
+  &__btn {
+    padding: .5rem 1.5rem;
+  }
+}
+
+
+
+.user__avatar-container {
+  display: block;
+  border-radius: 100%;
+  position: relative;
+  overflow: hidden;
+
+  cursor: pointer;
+  border: .125rem solid transparent;
+
+  &:before {
+    content: '';
+    float: right;
+    padding-bottom: 100%;
+  }
+
+  & > .img {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    object-fit: cover;
+  }
+
+  &:hover {
+    border-color: vars.$c-primal;
+  }
+}
+
+.user-activity {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+
+  font-size: 0.75rem;
+  padding: .5rem 1rem;
+
+  border: .125rem solid transparent;
+  border-radius: 1rem;
+  background-color: vars.$c-base-c;
+
+  opacity: 50%;
+
+  & > &__icon {
+    font-size: 1rem;
+  }
+
+
+  &:hover {
+    border: .125rem solid vars.$c-primal;
+    opacity: 100%;
+  }
+  &_active {
+    color: vars.$c-primal-c;
+    background-color: vars.$c-primal;
+
+    opacity: 100%;
+
+    & > .user-activity__icon {
+      fill: vars.$c-primal-c;
+    }
+
+    &:hover {
+      border-color: vars.$c-primal-c;
+    }
+  }
+}

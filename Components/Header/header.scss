@@ -1,0 +1,33 @@
+@use '../vars';
+
+
+.header {
+  width: 100%;
+
+  background-color: vars.$c-primal;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 6rem;
+
+  & > * {
+    flex-grow: 1;
+  }
+  &__logo, &__user-container {
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    & .icon {
+      stroke: vars.$c-base;
+    }
+  }
+
+  &__user-container {
+    justify-content: end;
+  }
+}
+

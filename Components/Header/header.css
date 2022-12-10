@@ -1,0 +1,25 @@
+.header {
+  width: 100%;
+  background-color: #6B99C3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 6rem;
+}
+.header > * {
+  flex-grow: 1;
+}
+.header__logo, .header__user-container {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header__logo .icon, .header__user-container .icon {
+  stroke: #E4E5EA;
+}
+.header__user-container {
+  justify-content: end;
+}
+
+/*# sourceMappingURL=header.css.map */

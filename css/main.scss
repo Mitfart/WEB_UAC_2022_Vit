@@ -1,0 +1,30 @@
+@use '../Components/vars';
+
+
+* {
+  border: 0;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+
+  background-color: vars.$c-neutral;
+
+  color: vars.$f-color;
+  font-size: vars.$f-size;
+  font-family: vars.$f-family;
+}
+
+.square {
+  &::before {
+    content: '';
+    display: block;
+    float: left;
+    padding-bottom: 100%;
+  }
+}

@@ -1,0 +1,29 @@
+@use '../Components/vars';
+
+
+.button {
+  color: vars.$c-primal-d;
+  background-color: vars.$c-primal-l;
+  border-radius: vars.$m-border-rad;
+
+  display: flex;
+  align-items: center;
+
+  padding: 10px 25px;
+
+  transition: .15s ease-in-out;
+
+  & > *:first-child {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    color: vars.$c-primal-d;
+    background-color: vars.$c-primal;
+  }
+
+  &_active {
+    color: vars.$c-primal-l;
+    background-color: vars.$c-primal-d;
+  }
+}
