@@ -1,27 +1,6 @@
 @use '../vars';
 
 .post {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 750px;
-}
-
-
-.post {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 2rem;
-
-  background-color: vars.$c-base;
-
-  border-radius: 1rem;
-  box-shadow: 0 .125rem .75rem .125rem vars.$c-base-c;
-
-
   &__header,
   &__main,
   &__footer,
@@ -33,7 +12,8 @@
   }
 
 
-  &__user-name, &__tag {
+  &__user-name,
+  &__tag {
     position: relative;
 
     &:after {
@@ -81,6 +61,10 @@
   &__main {
     align-items: start;
     flex-direction: column;
+
+    &:hover > .post__title {
+      color: vars.$c-primal;
+    }
   }
   &__title {
     font-size: 1.75rem;
@@ -105,7 +89,7 @@
   }
   &__media-container {
     display: flex;
-    gap: .25rem;
+    gap: .5rem;
   }
   &__media {
     flex-grow: 1;
@@ -116,10 +100,6 @@
     background-color: vars.$c-base-c;
 
     cursor: pointer;
-    border: .125rem solid transparent;
-    &:hover {
-      border-color: vars.$c-primal;
-    }
   }
 
 

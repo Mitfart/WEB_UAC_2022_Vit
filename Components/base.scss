@@ -10,7 +10,7 @@ html {
   color: vars.$c-second;
 }
 body {
-  background-color: vars.$c-base;
+  background-color: vars.$c-base-c;
 }
 
 
@@ -20,16 +20,16 @@ body {
   align-items: center;
   gap: 1rem;
 
-  background-color: vars.$c-primal;
-  color: vars.$c-primal-c;
+  background-color: vars.$c-primal-c;
+  color: vars.$c-primal;
 
   padding: .75rem 1.5rem;
   border-radius: 1000rem;
 
   cursor: pointer;
-  border: .125rem solid transparent;
   &:hover {
-    border-color: vars.$c-primal-c;
+    background-color: vars.$c-primal;
+    color: vars.$c-base;
   }
 
   &_active {
@@ -48,17 +48,23 @@ body {
 
 
 .search {
-  background-color: vars.$c-base;
+  background-color: vars.$c-base-c;
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
 
+  border: .125rem solid transparent;
   border-radius: 1000rem;
   overflow: hidden;
 
-  color: vars.$c-primal-c;
+  opacity: 50%;
 
+
+  &__field,
+  &__btn {
+    padding: .5rem 1rem;
+    border: none;
+  }
 
   &__field {
     width: 100%;
@@ -67,11 +73,18 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    &:hover > .icon {
+      color: vars.$c-primal;
+    }
   }
 
-  &__field,
-  &__btn {
-    padding: .5rem 1.5rem;
+
+  &:hover,
+  &:focus-within {
+    border-color: vars.$c-primal;
+    background-color: vars.$c-base;
+    opacity: 100%;
   }
 }
 
@@ -84,7 +97,6 @@ body {
   overflow: hidden;
 
   cursor: pointer;
-  border: .125rem solid transparent;
 
   &:before {
     content: '';
@@ -103,10 +115,6 @@ body {
 
     object-fit: cover;
   }
-
-  &:hover {
-    border-color: vars.$c-primal;
-  }
 }
 
 .user-activity {
@@ -119,8 +127,7 @@ body {
   font-size: 0.75rem;
   padding: .5rem 1rem;
 
-  border: .125rem solid transparent;
-  border-radius: 1rem;
+  border-radius: 100rem;
   background-color: vars.$c-base-c;
 
   opacity: 50%;
@@ -131,21 +138,55 @@ body {
 
 
   &:hover {
-    border: .125rem solid vars.$c-primal;
     opacity: 100%;
   }
   &_active {
-    color: vars.$c-primal-c;
-    background-color: vars.$c-primal;
+    color: vars.$c-primal;
+    background-color: vars.$c-primal-c;
 
     opacity: 100%;
 
     & > .user-activity__icon {
-      fill: vars.$c-primal-c;
+      fill: vars.$c-primal;
     }
 
     &:hover {
       border-color: vars.$c-primal-c;
     }
   }
+}
+
+
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1rem;
+
+  background-color: vars.$c-base;
+  border-radius: 1rem;
+}
+
+
+
+.main {
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1.5rem;
+}
+.posts,
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.posts {
+  min-width: 30rem;
+  flex-grow: 1;
+}
+.sidebar {
+  width: 20rem;
+  flex-shrink: 0;
 }
